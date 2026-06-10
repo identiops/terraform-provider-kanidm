@@ -1,6 +1,6 @@
 # Terraform Provider for Kanidm
 
-The official Terraform provider for [Kanidm](https://kanidm.com), enabling
+The inofficial Terraform provider for [Kanidm](https://kanidm.com), enabling
 Infrastructure-as-Code management of identity and access resources.
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)

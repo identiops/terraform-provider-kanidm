@@ -6,13 +6,14 @@ description: |-
 
 # Getting Started with the kanidm Provider
 
-This guide shows the minimal steps to authenticate to Kanidm and create a few common resources.
+This guide shows the minimal steps to authenticate to Kanidm and create a few
+common resources.
 
 ## Prerequisites
 
 - A running Kanidm instance
 - An API token with permission to manage the resources you want to create
-- OpenTofu or Terraform configured to use `seanlatimer/kanidm`
+- OpenTofu or Terraform configured to use `jceb/kanidm`
 
 ## Provider Configuration
 
@@ -20,7 +21,7 @@ This guide shows the minimal steps to authenticate to Kanidm and create a few co
 terraform {
   required_providers {
     kanidm = {
-      source = "seanlatimer/kanidm"
+      source = "jceb/kanidm"
     }
   }
 }
@@ -60,7 +61,8 @@ resource "kanidm_group" "developers" {
 }
 ```
 
-Use UUID-backed `id` references where possible. This keeps state stable even if Kanidm entries are renamed out-of-band.
+Use UUID-backed `id` references where possible. This keeps state stable even if
+Kanidm entries are renamed out-of-band.
 
 ## Create an OAuth2 Client
 
@@ -81,7 +83,8 @@ resource "kanidm_oauth2_basic" "grafana" {
 }
 ```
 
-`redirect_uris`, scope sets, and claim values are treated as unordered sets to match Kanidm storage behavior.
+`redirect_uris`, scope sets, and claim values are treated as unordered sets to
+match Kanidm storage behavior.
 
 ## Create an Application Entry
 
@@ -93,10 +96,12 @@ resource "kanidm_application" "mail" {
 }
 ```
 
-Use `kanidm_application` when you want to model an application that gates per-user application passwords through a linked group.
+Use `kanidm_application` when you want to model an application that gates
+per-user application passwords through a linked group.
 
 ## Next Steps
 
-- Use `kanidm_group_members` when you want to manage only part of a group's membership.
+- Use `kanidm_group_members` when you want to manage only part of a group's
+  membership.
 - Use `kanidm_account_policy` to attach policy to built-in or managed groups.
 - Use `kanidm_oauth2_public` for public/native clients.

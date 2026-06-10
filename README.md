@@ -1,13 +1,15 @@
 # Terraform Provider for Kanidm
 
-The official Terraform provider for [Kanidm](https://kanidm.com), enabling Infrastructure-as-Code management of identity and access resources.
+The official Terraform provider for [Kanidm](https://kanidm.com), enabling
+Infrastructure-as-Code management of identity and access resources.
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-[![Go Report Card](https://goreportcard.com/badge/github.com/seanlatimer/terraform-provider-kanidm)](https://goreportcard.com/report/github.com/seanlatimer/terraform-provider-kanidm)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jceb/terraform-provider-kanidm)](https://goreportcard.com/report/github.com/jceb/terraform-provider-kanidm)
 
 ## Features
 
-- **Person Accounts** - Manage user accounts with password or passkey authentication
+- **Person Accounts** - Manage user accounts with password or passkey
+  authentication
 - **Service Accounts** - Automated systems with API token generation
 - **Groups** - Organize users and service accounts with membership management
 - **OAuth2 Clients** - Configure OAuth2/OIDC integration with scope mapping
@@ -26,7 +28,7 @@ The official Terraform provider for [Kanidm](https://kanidm.com), enabling Infra
 terraform {
   required_providers {
     kanidm = {
-      source = "seanlatimer/kanidm"
+      source = "jceb/kanidm"
       version = "~> 0.1"
     }
   }
@@ -41,7 +43,7 @@ provider "kanidm" {
 ### Local Development
 
 ```bash
-git clone https://github.com/seanlatimer/terraform-provider-kanidm
+git clone https://github.com/jceb/terraform-provider-kanidm
 cd terraform-provider-kanidm
 go build -o terraform-provider-kanidm
 ```
@@ -147,7 +149,7 @@ export KANIDM_TOKEN="your-api-token"
 terraform {
   required_providers {
     kanidm = {
-      source = "seanlatimer/kanidm"
+      source = "jceb/kanidm"
     }
     onepassword = {
       source  = "1Password/onepassword"
@@ -215,7 +217,8 @@ Contributions are welcome! Please follow these guidelines:
 
 ### Commit Message Format
 
-This project follows [Conventional Commits](https://www.conventionalcommits.org/):
+This project follows
+[Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
 feat(resource): add new OAuth2 public client resource
@@ -228,8 +231,10 @@ chore(deps): update terraform-plugin-framework to v1.12.0
 
 This provider is built using:
 
-- [Terraform Plugin Framework](https://github.com/hashicorp/terraform-plugin-framework) - Modern provider SDK
-- [Kanidm REST API](https://kanidm.github.io/kanidm/stable/) - Identity management backend
+- [Terraform Plugin Framework](https://github.com/hashicorp/terraform-plugin-framework) -
+  Modern provider SDK
+- [Kanidm REST API](https://kanidm.github.io/kanidm/stable/) - Identity
+  management backend
 - Go 1.24 - Implementation language
 
 ### Project Structure
@@ -270,7 +275,8 @@ terraform-provider-kanidm/
 
 ## License
 
-This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Mozilla Public License 2.0 - see the
+[LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -279,9 +285,12 @@ This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE
 
 ## Support
 
-- GitHub Issues: [https://github.com/seanlatimer/terraform-provider-kanidm/issues](https://github.com/seanlatimer/terraform-provider-kanidm/issues)
-- Kanidm Documentation: [https://kanidm.github.io/kanidm/stable/](https://kanidm.github.io/kanidm/stable/)
+- GitHub Issues:
+  [https://github.com/jceb/terraform-provider-kanidm/issues](https://github.com/jceb/terraform-provider-kanidm/issues)
+- Kanidm Documentation:
+  [https://kanidm.github.io/kanidm/stable/](https://kanidm.github.io/kanidm/stable/)
 
 ---
 
-**Note:** This provider is currently in active development. APIs may change between releases until v1.0.0.
+**Note:** This provider is currently in active development. APIs may change
+between releases until v1.0.0.

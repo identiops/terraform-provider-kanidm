@@ -16,7 +16,7 @@ builds:
     main: .
     env:
       - CGO_ENABLED=0
-    mod_timestamp: '{{ .CommitTimestamp }}'
+    mod_timestamp: "{{ .CommitTimestamp }}"
     flags:
       - -trimpath
     ldflags:
@@ -27,13 +27,13 @@ builds:
       - linux
       - windows
     goarch:
-      - '386'
+      - "386"
       - amd64
       - arm
       - arm64
     ignore:
       - goos: darwin
-        goarch: '386'
+        goarch: "386"
       - goos: darwin
         goarch: arm
       - goos: freebsd
@@ -45,16 +45,16 @@ archives:
   - id: terraform-provider-kanidm
     formats:
       - zip
-    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     files:
       - LICENSE
       - README.md
 
 checksum:
   extra_files:
-    - glob: 'terraform-registry-manifest.json'
-      name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
-  name_template: '{{ .ProjectName }}_{{ .Version }}_SHA256SUMS'
+    - glob: "terraform-registry-manifest.json"
+      name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
+  name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
   algorithm: sha256
 
 signs:
@@ -70,8 +70,8 @@ signs:
 
 release:
   extra_files:
-    - glob: 'terraform-registry-manifest.json'
-      name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
+    - glob: "terraform-registry-manifest.json"
+      name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
   draft: false
   replace_existing_draft: true
   prerelease: auto
@@ -79,17 +79,17 @@ release:
   mode: replace
   header: |
     ## terraform-provider-kanidm {{ .Tag }}
-    
+
     **Release Date:** {{ .Date }}
-    
+
     For usage instructions, see the [README](https://github.com/seanlatimer/terraform-provider-kanidm#readme).
   footer: |
     ## Installation
-    
+
     This release is published to the [Terraform Registry](https://registry.terraform.io/providers/seanlatimer/kanidm).
-    
+
     To use this provider:
-    
+
     ```hcl
     terraform {
       required_providers {
@@ -100,9 +100,9 @@ release:
       }
     }
     ```
-    
+
     ## Checksums
-    
+
     All release artifacts are checksummed and GPG-signed for verification.
 
 changelog:
@@ -110,30 +110,30 @@ changelog:
   sort: asc
   abbrev: 7
   groups:
-    - title: 'Features'
+    - title: "Features"
       regexp: '^.*?feat(\([[:word:]]+\))??!?:.+$'
       order: 0
-    - title: 'Bug Fixes'
+    - title: "Bug Fixes"
       regexp: '^.*?fix(\([[:word:]]+\))??!?:.+$'
       order: 1
-    - title: 'Documentation'
+    - title: "Documentation"
       regexp: '^.*?docs(\([[:word:]]+\))??!?:.+$'
       order: 2
-    - title: 'Dependency Updates'
+    - title: "Dependency Updates"
       regexp: '^.*?(feat|fix|chore)\(deps?\)!?:.+$'
       order: 3
-    - title: 'Other'
+    - title: "Other"
       order: 999
   filters:
     exclude:
-      - '^test:'
-      - '^chore:'
-      - '^ci:'
+      - "^test:"
+      - "^chore:"
+      - "^ci:"
 
 # Terraform Registry manifest
 # This is required for provider publication
 metadata:
-  mod_timestamp: '{{ .CommitTimestamp }}'
+  mod_timestamp: "{{ .CommitTimestamp }}"
 
 # Announce releases (optional - can be configured later)
 # announce:

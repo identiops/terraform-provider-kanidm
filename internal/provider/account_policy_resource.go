@@ -95,7 +95,7 @@ resource "kanidm_account_policy" "admins" {
 				Optional:            true,
 				Validators: []validator.Int64{
 					int64validator.AtLeast(1),
-					int64validator.AtMost(3600),
+					// int64validator.AtMost(3600),
 				},
 			},
 			"auth_password_minimum_length": schema.Int64Attribute{

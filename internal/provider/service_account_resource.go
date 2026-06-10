@@ -18,10 +18,10 @@ import (
 )
 
 var (
-	_ resource.Resource                   = (*serviceAccountResource)(nil)
-	_ resource.ResourceWithImportState    = (*serviceAccountResource)(nil)
-	_ resource.ResourceWithModifyPlan    = (*serviceAccountResource)(nil)
-	_ resource.ResourceWithUpgradeState  = (*serviceAccountResource)(nil)
+	_ resource.Resource                 = (*serviceAccountResource)(nil)
+	_ resource.ResourceWithImportState  = (*serviceAccountResource)(nil)
+	_ resource.ResourceWithModifyPlan   = (*serviceAccountResource)(nil)
+	_ resource.ResourceWithUpgradeState = (*serviceAccountResource)(nil)
 )
 
 func NewServiceAccountResource() resource.Resource {
@@ -42,7 +42,7 @@ type serviceAccountResourceModel struct {
 	Shell            types.String `tfsdk:"shell"`
 	GenerateAPIToken types.Bool   `tfsdk:"generate_api_token"`
 	APIToken         types.String `tfsdk:"api_token"`
-EntryManagedBy types.String `tfsdk:"entry_managed_by"`
+	EntryManagedBy   types.String `tfsdk:"entry_managed_by"`
 	ValidFrom        types.String `tfsdk:"valid_from"`
 	ExpireAt         types.String `tfsdk:"expire_at"`
 }
@@ -94,7 +94,8 @@ entity can generate API tokens for a service account).`,
 			},
 			"displayname": schema.StringAttribute{
 				MarkdownDescription: "Display name for the service account. This is shown in the Kanidm UI and logs.",
-				Required:            true,
+				// Required:            true,
+				Optional: true,
 			},
 			"mail": schema.ListAttribute{
 				MarkdownDescription: "Email addresses for the service account.",
@@ -103,9 +104,9 @@ entity can generate API tokens for a service account).`,
 			},
 			"posix_enabled": schema.BoolAttribute{
 				MarkdownDescription: "Whether POSIX support is enabled for the service account. Enabling without a gidnumber lets Kanidm generate one automatically. Disabling after enablement is not currently supported.",
-				Optional: true,
-				Computed: true,
-				Default:  booldefault.StaticBool(false),
+				Optional:            true,
+				Computed:            true,
+				Default:             booldefault.StaticBool(false),
 			},
 			"gidnumber": schema.Int64Attribute{
 				MarkdownDescription: "Optional POSIX gidnumber for the service account. Computed after POSIX is enabled, even when Kanidm generates the value.",
@@ -141,7 +142,8 @@ entity can generate API tokens for a service account).`,
 				MarkdownDescription: "Account or group ID that can manage this service account. " +
 					"This allows delegated administration, including API token generation. " +
 					"**Required by Kanidm.** Use a fully-qualified name (e.g., `terraform-admin@idm.s8i.ca`) or UUID.",
-				Required: true,
+				// Required: true,
+				Optional: true,
 			},
 			"valid_from": schema.StringAttribute{
 				MarkdownDescription: "Earliest RFC3339 time when the service account can authenticate. Use `null` to leave unset.",

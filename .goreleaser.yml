@@ -82,11 +82,11 @@ release:
 
     **Release Date:** {{ .Date }}
 
-    For usage instructions, see the [README](https://github.com/seanlatimer/terraform-provider-kanidm#readme).
+    For usage instructions, see the [README](https://github.com/identiops/terraform-provider-kanidm#readme).
   footer: |
     ## Installation
 
-    This release is published to the [Terraform Registry](https://registry.terraform.io/providers/seanlatimer/kanidm).
+    This release is published to the [Terraform Registry](https://registry.terraform.io/providers/identiops/kanidm).
 
     To use this provider:
 
@@ -94,7 +94,7 @@ release:
     terraform {
       required_providers {
         kanidm = {
-          source  = "seanlatimer/kanidm"
+          source  = "identiops/kanidm"
           version = "~> {{ .Major }}.{{ .Minor }}"
         }
       }

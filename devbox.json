@@ -3,7 +3,7 @@
     "go_1_27@latest",
     "golangci-lint@latest",
     "opentofu@latest",
-    "goreleaser@latest",
+    "goreleaser@2.20.1",
     "github:steveyegge/beads"
   ],
   "shell": {

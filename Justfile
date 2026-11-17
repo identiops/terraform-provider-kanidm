@@ -6,7 +6,7 @@ import ".justlib/bump.just"
 set shell := ['bash', '-euo', 'pipefail', '-c']
 
 NAME := "kanidm"
-NAMESPACE := "jceb"
+NAMESPACE := "identiops"
 ARCH := arch()
 OS := os()
 
@@ -84,3 +84,12 @@ clean:
     rm -vpf $"terraform-provider-($name)"
     rm -vpf internal/spec/provider_code_spec.json
     rm -vprf dist/
+
+_bump_files CURRENT_VERSION NEW_VERSION:
+    #!/usr/bin/env nu
+    let current_version = "{{ CURRENT_VERSION }}"
+    let new_version = "{{ NEW_VERSION }}"
+    ["examples/provider/provider.tf"] | each {|file|
+      open --raw $file | lines | str replace -ar '\?ref=[^"]*' $"?ref=($new_version)" | str replace -ar '^\s*version\s*=\s*".*"' $'version = "($new_version)"' | collect | save -f $file
+      tofu fmt $file
+    }

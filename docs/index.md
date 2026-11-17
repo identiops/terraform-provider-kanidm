@@ -18,19 +18,19 @@ entries, and selected account/system policy objects.
 terraform {
   required_providers {
     kanidm = {
-      source = "jceb/kanidm"
+      source = "identiops/kanidm"
     }
   }
 }
 
 # Configure the Kanidm Provider with explicit credentials
 provider "kanidm" {
-  url   = "https://idm.s8i.ca"
+  url   = "https://idm.example.com"
   token = var.kanidm_token
 }
 
 # Alternative: Configure using environment variables
-# export KANIDM_URL="https://idm.s8i.ca"
+# export KANIDM_URL="https://idm.example.com"
 # export KANIDM_TOKEN="your-api-token"
 provider "kanidm" {}
 
@@ -38,7 +38,7 @@ provider "kanidm" {}
 terraform {
   required_providers {
     kanidm = {
-      source = "jceb/kanidm"
+      source = "identiops/kanidm"
     }
     onepassword = {
       source  = "1Password/onepassword"
@@ -53,7 +53,7 @@ data "onepassword_item" "kanidm_admin_token" {
 }
 
 provider "kanidm" {
-  url   = "https://idm.s8i.ca"
+  url   = "https://idm.example.com"
   token = data.onepassword_item.kanidm_admin_token.credential
 }
 ```

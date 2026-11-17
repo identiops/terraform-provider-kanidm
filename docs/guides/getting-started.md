@@ -13,7 +13,7 @@ common resources.
 
 - A running Kanidm instance
 - An API token with permission to manage the resources you want to create
-- OpenTofu or Terraform configured to use `jceb/kanidm`
+- OpenTofu or Terraform configured to use `identiops/kanidm`
 
 ## Provider Configuration
 
@@ -21,7 +21,7 @@ common resources.
 terraform {
   required_providers {
     kanidm = {
-      source = "jceb/kanidm"
+      source = "identiops/kanidm"
     }
   }
 }

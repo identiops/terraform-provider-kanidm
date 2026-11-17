@@ -141,7 +141,7 @@ entity can generate API tokens for a service account).`,
 			"entry_managed_by": schema.StringAttribute{
 				MarkdownDescription: "Account or group ID that can manage this service account. " +
 					"This allows delegated administration, including API token generation. " +
-					"**Required by Kanidm.** Use a fully-qualified name (e.g., `terraform-admin@idm.s8i.ca`) or UUID.",
+					"**Required by Kanidm.** Use a fully-qualified name (e.g., `terraform-admin@idm.example.com`) or UUID.",
 				// Required: true,
 				Optional: true,
 			},

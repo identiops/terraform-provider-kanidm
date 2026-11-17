@@ -1,6 +1,8 @@
 #!/usr/bin/env -S just --justfile
 # Documentation: https://just.systems/man/en/
 
+import ".justlib/bump.just"
+
 set shell := ['bash', '-euo', 'pipefail', '-c']
 
 NAME := "kanidm"

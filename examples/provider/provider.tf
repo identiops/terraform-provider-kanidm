@@ -2,7 +2,7 @@ terraform {
   required_providers {
     kanidm = {
       source  = "identiops/kanidm"
-      version = "0.3.0"
+      version = "0.3.1"
     }
   }
 }

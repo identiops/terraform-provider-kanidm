@@ -2,19 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2026-11-17
+
+### Miscellaneous Tasks
+
+- [dc00027](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/dc00027ed292f9fe0700c2ae3e206ba1a91019ea) Add environment configuration
+
 ## [0.3.0] - 2026-11-17
 
 ### Miscellaneous Tasks
 
-- [e5b8a89](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/e5b8a8985ea9c5da2f6b394e56c0bda9ed95c40e) Update dependencies
-- [e6ad457](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/e6ad457bf8a369e94902ba0567ae3c18e450904d) Replace make with just
-- [f8c2c84](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/f8c2c846c79521f3e67567880ab66f1b80325f85) Reconfiguration for jceb
-- [28c2316](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/28c2316c869a1b16db86ea95ca745c1526935366) Mark the provider as inofficial
-- [30d9f3e](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/30d9f3e5e7a9a98e07b4c7438448d0b639838b76) Tidy configuration
-- [aad98c7](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/aad98c79a0c8236e2c3e52debd43a21419896ded) Update dependencies
-- [1252a23](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/1252a235ba7bbf02cbb8defd4df7e29d8334f24b) Migrate from devbox to plain nix flakes
-- [1131535](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/1131535105f09e6d22812dc11c0e09cf9bc07fca) Cleanup configuration and complete migration to identiops
-- [1e5dbb2](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/1e5dbb2f0c272c1bb8508e581f067aaba5761382) Add manifest
+- [1e24317](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/1e24317a51da50622d74293e1539dff23c9d7d4d) Update dependencies
+- [1b07e95](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/1b07e953261a6e42b01278ed0b943355d07cfc46) Replace make with just
+- [de5d272](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/de5d272d9ac75706b489990ba885a46fbcf969a4) Reconfiguration for jceb
+- [52dcf08](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/52dcf082c74b0a632fd9327592887c0b9a9ac3d3) Mark the provider as inofficial
+- [42e3c96](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/42e3c9601d51d14d135072ea5ae73127fd7bebb0) Tidy configuration
+- [8fcb312](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/8fcb31287185fc7967b5f29a76269a80ef3a69fc) Update dependencies
+- [38e1a1c](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/38e1a1c7ec06168a7098f1b1c3fa2e0be8fe0c84) Migrate from devbox to plain nix flakes
+- [77e75c2](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/77e75c258cb1b69f7693567b2c34741d593e0c14) Cleanup configuration and complete migration to identiops
+- [370d5a6](https://forge.41ppl.com/identiops/terraform-provider-kanidm/commit/370d5a6d92e657e9c534a8241fdbdbf6b9e38472) Add manifest
 
 ## [0.1.10] - 2026-05-31
 

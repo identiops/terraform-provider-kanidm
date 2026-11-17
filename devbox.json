@@ -1,7 +1,7 @@
 {
   "packages": [
     "go_1_27@latest",
-    "golangci-lint@latest",
+    "golangci-lint@1.64.8",
     "opentofu@latest",
     "goreleaser@latest",
     "github:steveyegge/beads"

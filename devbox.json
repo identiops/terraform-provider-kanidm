@@ -1,6 +1,6 @@
 {
   "packages": [
-    "go_1_27@latest",
+    "go_1_27@1.27.3",
     "golangci-lint@latest",
     "opentofu@latest",
     "goreleaser@latest",
